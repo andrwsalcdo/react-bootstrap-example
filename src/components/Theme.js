@@ -1,8 +1,14 @@
 import React from 'react'
 
+import Navbar from './Navbar'
+import Jumbotron from './Jumbotron'
+import Page from './Page'
+
 const Theme = () => (
     <div>
-        <h1>Theme component</h1>
+        <Navbar />
+        <Jumbotron />
+        <Page />
     </div>
 )
 
