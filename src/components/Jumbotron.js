@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Jumbotron = () => (
+const Jumbotron = (props) => (
     <div className="jumbotron">
         <div className="container">
-            <h1>Hello, world!</h1>
-            <p className="lead">Sample bootstrap theme with React.js</p>
+            <h1>{props.heading}</h1>
+            <p className="lead">{props.text}</p>
             <p><a className="btn btn-primary btn-lg"href="#">Learn More Cool Stuff</a></p>
         </div>
     </div>

@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Navbar = () => (
+const Navbar = (props) => (
      <nav className="navbar navbar-default">
          <div className="container">
             <div className="navbar-header">
-                <a className="navbar-brand" href="#">Brand</a>
+                <a className="navbar-brand" href="#">{props.brand}</a>
             </div>
             <div id="navbar">
                 <ul className="nav navbar-nav">
