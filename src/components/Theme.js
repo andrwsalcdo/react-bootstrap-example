@@ -9,7 +9,7 @@ class Theme extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            currentPage: 'contact'
+            currentPage: 'home'
         }
     }
     handleChange = (page) => {
