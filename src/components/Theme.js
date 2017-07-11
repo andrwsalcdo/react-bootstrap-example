@@ -6,7 +6,8 @@ import Page from './Page'
 
 const Theme = () => (
     <div>
-        <Navbar brand='Brand' />
+        <Navbar brand='Brand' 
+        currentPage='home' />
         <Jumbotron heading='Hello, world!' 
         text='Sample bootstrap theme with React.js' />
         <Page currentPage='home' />

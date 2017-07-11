@@ -8,9 +8,9 @@ const Navbar = (props) => (
             </div>
             <div id="navbar">
                 <ul className="nav navbar-nav">
-                    <li className="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>                                        
+                    <li className={(props.currentPage === 'home') ? 'active': '' }><a href="#">Home</a></li>
+                    <li className={(props.currentPage === 'about') ? 'active': '' }><a href="#">About</a></li>
+                    <li className={(props.currentPage === 'contact') ? 'active': '' }><a href="#">Contact</a></li>                                        
                 </ul>
             </div>
          </div>
