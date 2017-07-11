@@ -12,12 +12,15 @@ class Theme extends Component {
             currentPage: 'contact'
         }
     }
-
+    handleChange = (page) => {
+        this.setState({ currentPage: page });
+    }
     render () {
         return (
             <div>
                 <Navbar brand={this.props.brand} 
-                currentPage={this.state.currentPage} />
+                currentPage={this.state.currentPage}
+                change={this.handleChange} />
                 <Jumbotron heading={this.props.heading} 
                 text={this.props.text} />
                 <Page currentPage={this.state.currentPage} />

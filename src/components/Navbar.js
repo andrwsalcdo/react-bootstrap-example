@@ -1,20 +1,38 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const Navbar = (props) => (
-     <nav className="navbar navbar-default">
-         <div className="container">
-            <div className="navbar-header">
-                <a className="navbar-brand" href="#">{props.brand}</a>
-            </div>
-            <div id="navbar">
-                <ul className="nav navbar-nav">
-                    <li className={(props.currentPage === 'home') ? 'active': '' }><a href="#">Home</a></li>
-                    <li className={(props.currentPage === 'about') ? 'active': '' }><a href="#">About</a></li>
-                    <li className={(props.currentPage === 'contact') ? 'active': '' }><a href="#">Contact</a></li>                                        
-                </ul>
-            </div>
-         </div>
-     </nav>
-)
 
-export default Navbar 
+class Navbar extends Component {
+    constructor(props) {
+        super(props); 
+    }
+    change(page) {
+        this.props.change(page); 
+    }
+    render () {
+        return (                   
+                <nav className="navbar navbar-default">
+                    <div className="container">
+                        <div className="navbar-header">
+                            <a className="navbar-brand" href="#">{this.props.brand}</a>
+                        </div>
+                        <div id="navbar">
+                            <ul className="nav navbar-nav">
+                                <li className={(this.props.currentPage === 'home') ? 'active': '' }>
+                                    <a onClick={this.props.change.bind(this, 'home')} href="#">Home</a>
+                                </li>
+                                <li className={(this.props.currentPage === 'about') ? 'active': '' }>
+                                    <a onClick={this.props.change.bind(this, 'about')} href="#">About</a>
+                                </li>
+                                <li className={(this.props.currentPage === 'contact') ? 'active': '' }>
+                                    <a onClick={this.props.change.bind(this, 'contact')} href="#">Contact</a>
+                                </li>                                        
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        )
+    }
+}
+
+
+export default Navbar
